@@ -24,6 +24,8 @@ public class Reduce {
     }
 
     public int getLastOdd() {
-        throw new NotImplementedException();
+        return arrayList.stream()
+                .filter(integer -> integer % 2 != 0)
+                .reduce(0,((integer, integer2) -> integer2));
     }
 }
