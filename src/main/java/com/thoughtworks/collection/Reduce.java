@@ -16,11 +16,11 @@ public class Reduce {
         double arrayLength = arrayList.size();
         return arrayList.stream()
                 .reduce(0,((integer, integer2) -> integer + integer2))/arrayLength;
-
     }
 
     public int getMaxValue() {
-        throw new NotImplementedException();
+        return arrayList.stream()
+                .reduce(0,((integer, integer2) -> Integer.max(integer,integer2)));
     }
 
     public int getLastOdd() {
